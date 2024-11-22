@@ -6,6 +6,7 @@
     font-family:"Sour Gummy", sans-serif;
     margin-left: 180px;
     margin-right: 180px;
+    overflow:visible;
     
 }
 .foodi{
@@ -35,6 +36,95 @@
 .foodi img:hover {
     transform: scale(1.05);
 }
+/* Main container for the restaurant list */
+.restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between items */
+    justify-content: center; /* Centers items horizontally */
+    padding: 20px;
+}
+
+/* Individual product card */
+.product {
+    flex: 1 1 calc(25% - 25px); /* 4 items per row with gap */
+    max-width: calc(25% - 20px);
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centers content */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Product image */
+.product img {
+    width: 100%; /* Makes the image fill the card */
+    height: 250px; /* Maintains aspect ratio */
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Hover effect on product */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Product name */
+.product h4 {
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 15px 0;
+    color: #333;
+}
+
+/* Responsive Design */
+
+/* Large screens (>=1024px) */
+@media (min-width: 1024px) {
+    .product {
+        flex: 1 1 calc(25% - 20px); /* 5 items per row */
+        max-width: calc(25% - 20px);
+    }
+}
+
+/* Tablets (768px to 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .product {
+        flex: 1 1 calc(33.33% - 20px); /* 3 items per row */
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+/* Mobile devices (480px to 767px) */
+@media (max-width: 768px) and (min-width: 480px) {
+    .product {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Extra small devices (<=480px) */
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 100%; /* 1 item per row */
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
 
 
 

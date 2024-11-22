@@ -84,7 +84,7 @@ const Foodi = () => {
     <div className='foodi'>
       {
         foodDemo.map((food)=>(
-          <div key={food.id} className="product">
+          <div key={food.id} >
             <img src={food.image} alt={food.name} />
           </div>
         ))

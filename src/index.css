@@ -9,8 +9,9 @@
 body{
     height: 100vh;
     width: 100vw;
-    color: black;  
-    overflow: hidden;
+    color: black;
+    overflow-x: hidden;  
+    
 }
 nav{
     height: 60px;
@@ -20,7 +21,7 @@ nav{
     position: relative;
     padding-top: 30px;
     font-size: 26px;  
-    flex-wrap: wrap;
+    
     
 }
 .logo{
