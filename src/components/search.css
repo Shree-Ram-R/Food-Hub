@@ -12,7 +12,7 @@ overflow:visible;
     align-items: center;
     margin-bottom: 50px;
 }
-input[type='text']{
+.search input[type='text']{
     width: 80%;
     border-radius: 0%;
     border: 2px solid #3d3b3b;
