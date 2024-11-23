@@ -14,6 +14,8 @@ const Home = () => {
       </div>
       <h1 className='res'>Restaurants</h1>
       <Restaurant/>
+      <div className="bor"><span></span></div>
+      hello
     </div>
     
    
