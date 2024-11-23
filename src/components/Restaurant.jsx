@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaShippingFast, FaStar } from 'react-icons/fa';
+import {  FaStar } from 'react-icons/fa';
 import fast from "../assets/image.png"
 
 const Restaurant = () => {
