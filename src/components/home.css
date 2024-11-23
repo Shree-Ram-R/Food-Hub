@@ -104,9 +104,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap:10px;
 }
-
-
+footer{
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 60px;
+}
+.footerContent{
+    display: flex;
+    gap: 50px; 
+    justify-content: center;
+}
+.cont{
+    display: flex;
+    gap: 40px;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.contact li:first-child{
+    margin-top:10px;
+    gap:10px;
+}
+.contact li,
+.avai li{
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+.Soci{
+    list-style: none;
+    display: flex;
+    padding-top: 10px;
+    gap: 10px;
+}
+svg{
+    color: #333;
+    cursor: pointer;
+}
 
 @media (min-width: 1024px) {
     .product {
@@ -114,6 +154,18 @@
         max-width: calc(25% - 20px);
         
     }
+    .contact li,
+    .avai li{
+        margin-left: 20px;
+        
+    }
+    .cont{
+        display: flex;
+        gap: 100px;
+        flex-wrap: nowrap;
+        font-size:23px;
+    }
+    
 }
 
 
@@ -121,6 +173,21 @@
     .product {
         flex: 1 1 calc(33.33% - 20px); 
         max-width: calc(33.33% - 20px);
+    }
+    .contact li,
+    .avai li{
+        margin-left: 20px;
+        gap:10px;
+    }
+    .cont{
+        display: flex;
+        gap: 100px;
+        font-size:20px;
+    }
+    .footerContent{
+        display: flex;
+        flex-direction: column;
+        gap: 30px; 
     }
 }
 
@@ -130,12 +197,42 @@
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
+    .contact li{
+        margin-left: 20px;
+        gap:10px;
+    }
+    .cont{
+        display: flex;
+        gap: 100px;
+        flex-wrap: wrap;
+        font-size:18px;
+        
+    }
+    .footerContent{
+        display: flex;
+        flex-direction: column;
+        gap: 30px; 
+    }
 }
+
 
 @media (max-width: 480px) {
     .product {
         flex: 1 1 100%; 
         max-width: 100%;
+    }
+    .contact li{
+        margin-left: 20px;
+        gap:10px;
+    }
+    .cont{
+        display: flex;
+        gap: 100px;
+    }
+    .footerContent{
+        display: flex;
+        flex-direction: column;
+        gap: 30px; 
     }
 }
 
@@ -151,6 +248,8 @@
         font-size: 30px;
        
     }
+
+    
 }
 
 /* Tablets (768px to 1024px) */

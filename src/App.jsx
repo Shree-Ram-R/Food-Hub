@@ -12,7 +12,7 @@ function App() {
     <div className="foodApp">
     <nav>
       <div className="logo">Food Hub</div>
-      <ul>
+      <ul className="nav">
         <li><Link to="/" style={{ textDecoration: 'none' ,color: "black" }}><p className="navIc"><FaHome/>Home</p></Link></li>
         <li><Link to="/Menu" style={{ textDecoration: 'none',color: "black" }}><p className="navIc"><FaBars/>Menu</p></Link></li>
         <li><Link to="/Search" style={{ textDecoration: 'none', color: "black" }}> <p className="navIc"><FaSearch/>Search</p></Link></li>
