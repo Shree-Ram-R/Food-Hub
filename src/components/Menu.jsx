@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaShippingFast, FaStar } from 'react-icons/fa';
 import "./menu.css"
 
@@ -226,7 +226,7 @@ const Menu = () => {
       food:"Saucy  Chicken Wings",
       price:"₹149",
       image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/9/18/3fa2b21a-5ac9-43a8-9c83-46160d33fa55_dc4b5ac7-afb8-48e4-9c12-d1063e0b237a.jpg",
-      name:"Domino's Chicken Fiesta",
+      name:" Chicken Fiesta",
       rating:4.2,
        
     },
@@ -235,7 +235,7 @@ const Menu = () => {
       food:"Taco Mexicana",
       price:"₹189",
       image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/118610bb1b497c0090177b709a452636",
-      name:"Domino's Chicken Fiesta",
+      name:" Chicken Fiesta",
       rating:4.2,
        
     },
@@ -244,7 +244,7 @@ const Menu = () => {
       food:"Saucy Chicken Meatballs",
       price:"₹149",
       image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/9/18/2463cdb0-c1dd-4a3c-8bb1-449c5f587008_8561339a-aaee-4595-a8f1-2c51499bc92b.jpg",
-      name:"Domino's Chicken Fiesta",
+      name:" Chicken Fiesta",
       rating:4.2,
        
     },
@@ -253,7 +253,7 @@ const Menu = () => {
       food:"Hot & Fiery Cheesiken",
       price:"₹239",
       image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/7/3/88e1bf2c-3a43-42c1-953a-e3a37e655b7c_57adf83d-154e-4a9b-b01a-9f326eead31f.jpg",
-      name:"Domino's Chicken Fiesta",
+      name:"Chicken Fiesta",
       rating:4.2,
        
     },
@@ -311,21 +311,13 @@ const Menu = () => {
       rating:4.2,
        
     },
-    {
-      id: 33,
-      food:"Burger Wraps",
-      price:"₹200",
-      image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/7/27/ee2bb107-5603-4be5-8b58-86534ffccf0b_bb45a561-950e-41a8-9095-4a4041ce5e93.jpeg",
-      name:"Faasos-Signature Wraps&....",
-      rating:4.2,
-       
-    },
+    
     {
       id: 34,
       food:"Garlic Manchurian Wrap ",
       price:"₹220",
       image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/11/15/af5b150d-e59c-4018-a78f-73151de78ef1_6c35e0ba-668b-4e12-91cc-41c6187dc208.jpeg",
-      name:"Faasos-Signature Wraps&....",
+      name:"Faasos Wraps&....",
       rating:4.2,
        
     },
@@ -334,7 +326,7 @@ const Menu = () => {
       food:"Smoky  Shawarma combo",
       price:"₹379",
       image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/9/11/b7684420-c68a-4ed5-a0d6-d73f1fc84d85_d1cd389c-fdb3-498a-98d6-a113c46fbf32.jpeg",
-      name:"Faasos-Signature Wraps&....",
+      name:"Faasos Wraps&....",
       rating:4.2,
        
     },
@@ -343,7 +335,7 @@ const Menu = () => {
       food:" Alphonso Ice Cream",
       price:"₹380",
       image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/h8uh8fb7gvbipfhpbuzp",
-      name:"Baskin Robbins-Ice Cream...",
+      name:"Baskin Robbins..",
       rating:4.2,
        
     },
@@ -374,10 +366,36 @@ const Menu = () => {
       rating:4.5,
        
     },
+    {
+      id: 40,
+      food:"Burger Wraps",
+      price:"₹200",
+      image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/7/27/ee2bb107-5603-4be5-8b58-86534ffccf0b_bb45a561-950e-41a8-9095-4a4041ce5e93.jpeg",
+      name:"Faasos Wraps&....",
+      rating:4.2,
+       
+    },
     
     
     
   ];
+  const [a,seta]=useState(0);
+  const [addCart,setAddCart]=useState("Add Cart");
+  const handleCart=(a,id)=>{
+    if(a==0){
+      setAddCart("Remove Cart")
+      seta(a+1)
+      console.log(a);
+    }
+
+    else if(a==1){
+      setAddCart("Add Cart");
+      console.log(a)
+      seta(a-1);
+    }
+      
+      
+  }
 return (
   <div className="menu">
     <div className='restaurant'>
@@ -391,7 +409,7 @@ return (
         
         <div className="namRat"> <h4>{res.name}</h4>
         <h4><FaStar/>{res.rating}</h4></div>
-        <button>Add Cart</button>
+        <button className='add' onClick={()=>{handleCart(a,res.id)}}>{addCart}</button>
       </div>
     ))}
 
