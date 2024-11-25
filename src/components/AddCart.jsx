@@ -10,7 +10,7 @@ const AddCart = ({cart,setCart}) => {
     setCart((prevCart) => {
       const updatedCart = prevCart.map((item) => {
         if (item.id === id) {
-          // Update item quantity
+          
           return { ...item, item: action === 'increase' ? item.item + 1 : item.item - 1 };
         }
         return item;
@@ -39,7 +39,7 @@ const AddCart = ({cart,setCart}) => {
           <h4>Quantity</h4>
           <button
                 onClick={() => handleQuantityChange(res.id, 'decrease')}
-                disabled={res.item <= 1} // Disable the button if quantity is 1
+                disabled={res.item <= 1} 
               >
                 -
               </button>
